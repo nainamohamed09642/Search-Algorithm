@@ -20,14 +20,52 @@ To write a program to perform linear search and binary search using python progr
 i)	#Use a linear search method to match the item in a list.
 ```
 
-
+'''
+def linearSearch(array,n,k):
+    
+    for i in range(0,n):
+        if(array[i]==k):
+            return i
+    return -1
+array = eval(input())
+array=sorted(array)
+n=len(array)
+k=eval(input())
+res=linearSearch(array,n,k)
+if(res==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",res)
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 
 
-
+def BinarySearch(arr,low,high,x):
+    if high>=low:
+        mid=(high+low)//2
+        if arr[mid]==x:
+           return mid
+        elif arr[mid]>x:
+            return BinarySearch(arr,low,mid-1,x)
+        else:
+            return BinarySearch(arr,mid+1,high,x)
+    else:
+        return -1
+    
+arr = eval(input())
+arr=sorted(arr)
+x=eval(input())
+result=BinarySearch(arr,0,len(arr)-1,x)
+if result !=-1:
+    print(arr)
+    print("Element found at index: ",str(result))
+else:
+    print(arr)
+    print("Element not found")
 
 
 ```
@@ -35,12 +73,36 @@ iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
 
 
-
+def BinarySearch(arr,low,high,x):
+    if high>=low:
+        mid=(high+low)//2
+        if arr[mid]==x:
+           return mid
+        elif arr[mid]>x:
+            return BinarySearch(arr,low,mid-1,x)
+        else:
+            return BinarySearch(arr,mid+1,high,x)
+    else:
+        return -1
+    
+arr = eval(input())
+arr=sorted(arr)
+x=eval(input())
+result=BinarySearch(arr,0,len(arr)-1,x)
+if result !=-1:
+    print(arr)
+    print("Element found at index: ",str(result))
+else:
+    print(arr)
+    print("Element not found")
 
 
 ```
 ## Sample Input and Output
 
+![image](https://github.com/nainamohamed09642/Search-Algorithm/assets/151916360/d810037b-8636-488b-b5a6-4fc0d78888d3)
+![image](https://github.com/nainamohamed09642/Search-Algorithm/assets/151916360/0d11818a-e7c8-4222-a354-67a448d251a1)
+![image](https://github.com/nainamohamed09642/Search-Algorithm/assets/151916360/9db9f3ec-d005-4cfb-b80b-049f279a11db)
 
 
 
